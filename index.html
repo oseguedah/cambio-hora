@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="vendors/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
+    <link href="vendors/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendors/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" rel="stylesheet">
+    <!-- Main styles for this application-->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/mtr-datepicker.min.css">
+    <link rel="stylesheet" href="css/mtr-datepicker.clutterboard-theme.min.css">
+
+    <link rel="stylesheet" href="css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horario</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body text-center">
+
+                        <div id="mtr-datepicker"></div>
+                        <button id="changeDate" class="btn btn-primary" type="button">
+                            <i class="fa fa-dot-circle-o"></i>
+                            Cambiar hora
+                        </button>
+                        <button id="resetDate" class="btn btn-danger" type="button">
+                            <i class="fa fa-ban"></i>
+                            Restaurar hora
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            
+            <div class="col-sm-6 col-lg-3">
+                <div class="brand-card">
+                    <div class="brand-card-body">
+                        <div class="text-value">El Salvador</div>
+                    </div>
+                    <div class="flag-icon flag-icon-sv" style="width: auto;height: 190px;"></div>
+                    <div class="brand-card-body">
+                        <div class="text-value" id="clock_sv">00:00:00 am</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3">
+                <div class="brand-card">
+                    <div class="brand-card-body">
+                        <div class="text-value">Honduras</div>
+                    </div>
+                    <div class="flag-icon flag-icon-hn" style="width: auto;height: 190px;"></div>
+                    <div class="brand-card-body">
+                        <div class="text-value" id="clock_hn">00:00:00 am</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3">
+                <div class="brand-card">
+                    <div class="brand-card-body">
+                        <div class="text-value">Guatemala</div>
+                    </div>
+                    <div class="flag-icon flag-icon-gt" style="width: auto;height: 190px;"></div>
+                    <div class="brand-card-body">
+                        <div class="text-value" id="clock_gt">00:00:00 am</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3">
+                <div class="brand-card">
+                    <div class="brand-card-body">
+                        <div class="text-value">Nicaragua</div>
+                    </div>
+                    <div class="flag-icon flag-icon-ni" style="width: auto;height: 190px;"></div>
+                    <div class="brand-card-body">
+                        <div class="text-value" id="clock_ni">00:00:00 am</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            
+            <div class="col-sm-6 col-lg-3">
+                <div class="brand-card">
+                    <div class="brand-card-body">
+                        <div class="text-value">Costa Rica</div>
+                    </div>
+                    <div class="flag-icon flag-icon-cr" style="width: auto;height: 190px;"></div>
+                    <div class="brand-card-body">
+                        <div class="text-value" id="clock_cr">00:00:00 am</div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="col-sm-6 col-lg-3">
+                <div class="brand-card">
+                    <div class="brand-card-body">
+                        <div class="text-value">Panamá</div>
+                    </div>
+                    <div class="flag-icon flag-icon-pa" style="width: auto;height: 190px;"></div>
+                    <div class="brand-card-body">
+                        <div class="text-value" id="clock_pam">00:00:00 am</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3">
+                <div class="brand-card">
+                    <div class="brand-card-body">
+                        <div class="text-value">Argentina/Buenos Aires</div>
+                    </div>
+                    <div class="flag-icon flag-icon-ar" style="width: auto;height: 190px;"></div>
+                    <div class="brand-card-body">
+                        <div class="text-value" id="clock_arg">00:00:00 am</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3">
+                <div class="brand-card">
+                    <div class="brand-card-body">
+                        <div class="text-value">México / CDMX</div>
+                    </div>
+                    <div class="flag-icon flag-icon-mx" style="width: auto;height: 190px;"></div>
+                    <div class="brand-card-body">
+                        <div class="text-value" id="clock_mx">00:00:00 am</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            
+            <div class="col-sm-6 col-lg-3">
+                <div class="brand-card">
+                    <div class="brand-card-body">
+                        <div class="text-value">Perú / Lima</div>
+                    </div>
+                    <div class="flag-icon flag-icon-pe" style="width: auto;height: 190px;"></div>
+                    <div class="brand-card-body">
+                        <div class="text-value" id="clock_pu">00:00:00 am</div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="col-sm-6 col-lg-3">
+                <div class="brand-card">
+                    <div class="brand-card-body">
+                        <div class="text-value">Colombia / Bogotá</div>
+                    </div>
+                    <div class="flag-icon flag-icon-co" style="width: auto;height: 190px;"></div>
+                    <div class="brand-card-body">
+                        <div class="text-value" id="clock_co">00:00:00 am</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3">
+                <div class="brand-card">
+                    <div class="brand-card-body">
+                        <div class="text-value">Bolivia / La Paz</div>
+                    </div>
+                    <div class="flag-icon flag-icon-bo" style="width: auto;height: 190px;"></div>
+                    <div class="brand-card-body">
+                        <div class="text-value" id="clock_bl">00:00:00 am</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-3">
+                <div class="brand-card">
+                    <div class="brand-card-body">
+                        <div class="text-value">Paraguay / Asunción</div>
+                    </div>
+                    <div class="flag-icon flag-icon-py" style="width: auto;height: 190px;"></div>
+                    <div class="brand-card-body">
+                        <div class="text-value" id="clock_py">00:00:00 am</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            
+            <div class="col-sm-6 col-lg-3">
+                <div class="brand-card">
+                    <div class="brand-card-body">
+                        <div class="text-value">Ecuador / Guayaquil</div>
+                    </div>
+                    <div class="flag-icon flag-icon-ec" style="width: auto;height: 190px;"></div>
+                    <div class="brand-card-body">
+                        <div class="text-value" id="clock_ec">00:00:00 am</div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="col-sm-6 col-lg-3"></div>
+            <div class="col-sm-6 col-lg-3"></div>
+            <div class="col-sm-6 col-lg-3"></div>
+        </div>      
+
+    </div>
+    
+
+    <script src="vendors/jquery/js/jquery.min.js"></script>
+    <script src="vendors/popper.js/js/popper.min.js"></script>
+    <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendors/pace-progress/js/pace.min.js"></script>
+    <script src="vendors/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="vendors/@coreui/coreui/js/coreui.min.js"></script>
+    <script src="vendors/pnotify/js/Pnotify.js"></script>
+    <script src="vendors/pnotify/js/PnotifyButtons.js"></script>
+    <script src="vendors/pnotify/js/PnotifyConfirm.js"></script>
+    <script src="vendors/pnotify/js/PnotifyMobile.js"></script>
+    <script src="vendors/pnotify/js/PnotifyNonBlock.js"></script>
+    
+    <script src="js/moment.js"></script>
+    <script src="js/moment-timezone-with-data.min.js"></script>
+    <script src="js/mtr-datepicker.min.js"></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
