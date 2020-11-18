@@ -1,20 +1,20 @@
-var date = new Date();
+var date  = new Date();
 var sv    = moment.tz(new Date(), "America/El_Salvador");
 
-var mx   = sv.clone().tz("America/Mexico_City");
+var mx    = sv.clone().tz("America/Mexico_City");
 
-var gt   = sv.clone().tz("America/Guatemala");
-var hn   = sv.clone().tz("America/Tegucigalpa");
-var ni   = sv.clone().tz("America/Managua");
-var cr   = sv.clone().tz("America/Costa_Rica");
+var gt    = sv.clone().tz("America/Guatemala");
+var hn    = sv.clone().tz("America/Tegucigalpa");
+var ni    = sv.clone().tz("America/Managua");
+var cr    = sv.clone().tz("America/Costa_Rica");
 var pam   = sv.clone().tz("America/Panama");
 
-var pu   = sv.clone().tz("America/Lima");
-var co   = sv.clone().tz("America/Bogota");
-var bl   = sv.clone().tz("America/La_Paz");
-var py   = sv.clone().tz("America/Asuncion");
-var ec   = sv.clone().tz("America/Guayaquil");
-
+var pu    = sv.clone().tz("America/Lima");
+var co    = sv.clone().tz("America/Bogota");
+var bl    = sv.clone().tz("America/La_Paz");
+var py    = sv.clone().tz("America/Asuncion");
+var ec    = sv.clone().tz("America/Guayaquil");
+var cl    = sv.clone().tz("America/Santiago");
 var arg   = sv.clone().tz("America/Argentina/Buenos_Aires");
 
 $(document).ready(function(){
@@ -57,6 +57,7 @@ function setDate(newDate){
   bl   = sv.clone().tz("America/La_Paz");
   py   = sv.clone().tz("America/Asuncion");
   ec   = sv.clone().tz("America/Guayaquil");
+  cl   = sv.clone().tz("America/Santiago");
 
   arg  = sv.clone().tz("America/Argentina/Buenos_Aires");
 };
@@ -76,6 +77,7 @@ function showTime(){
     bl.add(1,"s");
     py.add(1,"s");
     ec.add(1,"s");
+    cl.add(1,"s");
     arg.add(1,"s");
     
     //putting time in our div
@@ -93,6 +95,7 @@ function showTime(){
     $('#clock_bl').html(bl.format('hh:mm:ss a'));
     $('#clock_py').html(py.format('hh:mm:ss a'));
     $('#clock_ec').html(ec.format('hh:mm:ss a'));
+    $('#clock_cl').html(cl.format('hh:mm:ss a'));
     $('#clock_arg').html(arg.format('hh:mm:ss a'));
 
     //to change time in every seconds
