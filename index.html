@@ -11,6 +11,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/mdtimepicker.css">
     <link rel="stylesheet" href="css/mtr-datepicker.min.css">
     <link rel="stylesheet" href="css/mtr-datepicker.clutterboard-theme.min.css">
 
@@ -25,12 +26,13 @@
             <div class="col-sm-4">
                 <div class="card">
                     <div class="card-body text-center">
-
-                        <div id="mtr-datepicker"></div>
-                        <button id="changeDate" class="btn btn-primary" type="button">
-                            <i class="fa fa-dot-circle-o"></i>
-                            Cambiar hora
-                        </button>
+                        <br>
+                        <div class="text-value">Seleccione la hora</div>
+                        <div class="input-group">
+                            <input class="form-control" id="timepicker" type="text" placeholder="Hora">
+                            <div class="input-group-append"><span class="input-group-text"><i class="fa fa-clock-o"></i></span></div>
+                        </div>
+                        <br>
                         <button id="resetDate" class="btn btn-danger" type="button">
                             <i class="fa fa-ban"></i>
                             Restaurar hora
@@ -243,6 +245,7 @@
     <script src="js/moment.js"></script>
     <script src="js/moment-timezone-with-data.min.js"></script>
     <script src="js/mtr-datepicker.min.js"></script>
+    <script src="js/mdtimepicker.min.js"></script>
 
     <script src="js/index.js"></script>
 
