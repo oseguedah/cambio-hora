@@ -1,3 +1,4 @@
+var date = new Date();
 var sv    = moment.tz(new Date(), "America/El_Salvador");
 
 var mx   = sv.clone().tz("America/Mexico_City");
@@ -16,34 +17,32 @@ var ec   = sv.clone().tz("America/Guayaquil");
 
 var arg   = sv.clone().tz("America/Argentina/Buenos_Aires");
 
-var datepicker
-
 $(document).ready(function(){
 
-  datepicker = new MtrDatepicker({
-    target: 'mtr-datepicker',
-    smartHours: true,
-    datepicker: false,
-    minutes: {
-      step: 1
-    }
+  $('#timepicker').mdtimepicker();
+
+  $('#timepicker').mdtimepicker().on('timechanged', function(e){    
+    date.setHours(
+      e.time.split(":")[0],
+      e.time.split(":")[1],
+      0
+    );
+
+    setDate(date.getTime());
   });
 
-  setDate(new Date());
   showTime();
-
-  $("#changeDate").click(function(){
-    changeDate();
-  });
 
   $("#resetDate").click(function(){
     setDate(new Date());
+    $('#timepicker').val("");
   });
 
 });
 
-function setDate(date){
-  sv   = moment.tz(date, "America/El_Salvador");
+function setDate(newDate){
+  console.log(newDate);
+  sv   = moment.tz(newDate, "America/El_Salvador");
 
   mx   = sv.clone().tz("America/Mexico_City");
 
@@ -101,5 +100,5 @@ function showTime(){
   };
 
   function changeDate(){
-    setDate( Date.parse(datepicker.toUTCString()) );
+    setDate(date.getTime());
   }
